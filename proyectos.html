@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Proyectos realizados por Hermanos Cattaneo. Casas, edificios y trabajos de pavimentación completados con éxito.">
+  <title>Proyectos - Hermanos Cattaneo | Constructora</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Iconos (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .page-header {
+      background: linear-gradient(135deg, rgba(255, 140, 0, 0.9), rgba(218, 165, 32, 0.9)),
+                  url('https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1920');
+      background-size: cover;
+      background-position: center;
+      padding: 120px 20px 80px;
+      text-align: center;
+      color: white;
+    }
+
+    .page-header h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover .project-card-image {
+      transform: scale(1.05);
+    }
+
+    .project-card-content {
+      padding: 25px;
+    }
+
+    .project-card-badge {
+      display: inline-block;
+      padding: 5px 15px;
+      background: linear-gradient(135deg, #FF8C00, #DAA520);
+      color: white;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .project-card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #333;
+    }
+
+    .project-card-text {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .project-card-details {
+      display: flex;
+      gap: 20px;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #eee;
+      padding-top: 15px;
+    }
+
+    .project-card-details span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="top-bar">
+    <div class="top-bar-container">
+      <div class="top-bar-item">
+        <i class="fas fa-phone"></i>
+        <a href="tel:+5491234567890">+54 9 123 456-7890</a>
+      </div>
+      <div class="top-bar-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:contacto@hermanoscattaneo.com">contacto@hermanoscattaneo.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">
+        <div class="navbar-logo-icon">
+          <i class="fas fa-hard-hat"></i>
+        </div>
+        <span>Hermanos Cattaneo</span>
+      </a>
+
+      <ul class="navbar-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <button class="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <section class="page-header">
+    <h1>Nuestros Proyectos</h1>
+    <p>Casos de éxito que demuestran nuestra experiencia y compromiso</p>
+  </section>
+
+  <!-- ============ PROYECTOS ============ -->
+  <!-- INICIO SECCIÓN: Grid de proyectos -->
+  <section class="section section-white">
+    <div class="section-container">
+      <div class="cards-grid">
+
+        <!-- PROYECTO 1: Casa Familiar Moderna -->
+        <!-- EDITAR: Cada proyecto se puede duplicar y modificar -->
+        <div class="project-card scroll-animate" onclick="window.location.href='proyecto-casa-moderna.html'">
+          <!-- EDITAR: Imagen principal del proyecto -->
+          <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Casa Familiar Moderna" class="project-card-image">
+          <div class="project-card-content">
+            <!-- EDITAR: Tipo de proyecto -->
+            <span class="project-card-badge">Casa</span>
+            <!-- EDITAR: Nombre del proyecto -->
+            <h3 class="project-card-title">Casa Familiar Moderna</h3>
+            <!-- EDITAR: Descripción breve -->
+            <p class="project-card-text">
+              Vivienda unifamiliar de 180m² con diseño contemporáneo, 3 habitaciones y
+              amplios espacios luminosos. Terminaciones de primera calidad.
+            </p>
+            <!-- EDITAR: Detalles del proyecto -->
+            <div class="project-card-details">
+              <span><i class="fas fa-ruler-combined"></i> 180m²</span>
+              <span><i class="fas fa-bed"></i> 3 Habitaciones</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROYECTO 2: Edificio San Martín -->
+        <div class="project-card scroll-animate" onclick="window.location.href='proyecto-edificio-san-martin.html'">
+          <!-- EDITAR: Imagen principal del proyecto -->
+          <img src="https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Edificio San Martín" class="project-card-image">
+          <div class="project-card-content">
+            <!-- EDITAR: Tipo de proyecto -->
+            <span class="project-card-badge">Edificio</span>
+            <!-- EDITAR: Nombre del proyecto -->
+            <h3 class="project-card-title">Edificio San Martín</h3>
+            <!-- EDITAR: Descripción breve -->
+            <p class="project-card-text">
+              Edificio de 3 plantas con 12 unidades funcionales. Construcción integral
+              con estructura de hormigón armado y todas las instalaciones certificadas.
+            </p>
+            <!-- EDITAR: Detalles del proyecto -->
+            <div class="project-card-details">
+              <span><i class="fas fa-building"></i> 3 Niveles</span>
+              <span><i class="fas fa-door-open"></i> 12 Unidades</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROYECTO 3: Pavimentación Barrio Norte -->
+        <div class="project-card scroll-animate">
+          <!-- EDITAR: Imagen principal del proyecto -->
+          <img src="https://images.pexels.com/photos/416960/pexels-photo-416960.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pavimentación Barrio Norte" class="project-card-image">
+          <div class="project-card-content">
+            <!-- EDITAR: Tipo de proyecto -->
+            <span class="project-card-badge">Pavimentación</span>
+            <!-- EDITAR: Nombre del proyecto -->
+            <h3 class="project-card-title">Pavimentación Barrio Norte</h3>
+            <!-- EDITAR: Descripción breve -->
+            <p class="project-card-text">
+              Adoquinado de 2000m² en espacio público. Trabajo realizado con técnicas
+              profesionales y materiales de alta resistencia.
+            </p>
+            <!-- EDITAR: Detalles del proyecto -->
+            <div class="project-card-details">
+              <span><i class="fas fa-ruler-combined"></i> 2000m²</span>
+              <span><i class="fas fa-road"></i> Adoquinado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROYECTO 4: Casa Estilo Campo -->
+        <div class="project-card scroll-animate">
+          <!-- EDITAR: Imagen principal del proyecto -->
+          <img src="https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Casa Estilo Campo" class="project-card-image">
+          <div class="project-card-content">
+            <!-- EDITAR: Tipo de proyecto -->
+            <span class="project-card-badge">Casa</span>
+            <!-- EDITAR: Nombre del proyecto -->
+            <h3 class="project-card-title">Casa Estilo Campo</h3>
+            <!-- EDITAR: Descripción breve -->
+            <p class="project-card-text">
+              Vivienda de estilo campestre de 220m² con galerías amplias, fogonero y
+              terminaciones rústicas de alta calidad.
+            </p>
+            <!-- EDITAR: Detalles del proyecto -->
+            <div class="project-card-details">
+              <span><i class="fas fa-ruler-combined"></i> 220m²</span>
+              <span><i class="fas fa-bed"></i> 4 Habitaciones</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROYECTO 5: Complejo de Departamentos -->
+        <div class="project-card scroll-animate">
+          <!-- EDITAR: Imagen principal del proyecto -->
+          <img src="https://images.pexels.com/photos/271795/pexels-photo-271795.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Complejo de Departamentos" class="project-card-image">
+          <div class="project-card-content">
+            <!-- EDITAR: Tipo de proyecto -->
+            <span class="project-card-badge">Edificio</span>
+            <!-- EDITAR: Nombre del proyecto -->
+            <h3 class="project-card-title">Complejo de Departamentos</h3>
+            <!-- EDITAR: Descripción breve -->
+            <p class="project-card-text">
+              Complejo habitacional de 2 torres con 18 departamentos, amenities
+              y cocheras. Entrega llave en mano.
+            </p>
+            <!-- EDITAR: Detalles del proyecto -->
+            <div class="project-card-details">
+              <span><i class="fas fa-building"></i> 2 Torres</span>
+              <span><i class="fas fa-door-open"></i> 18 Unidades</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROYECTO 6: Pavimentación en Concreto - Acceso Industrial -->
+        <div class="project-card scroll-animate">
+          <!-- EDITAR: Imagen principal del proyecto -->
+          <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pavimentación Industrial" class="project-card-image">
+          <div class="project-card-content">
+            <!-- EDITAR: Tipo de proyecto -->
+            <span class="project-card-badge">Pavimentación</span>
+            <!-- EDITAR: Nombre del proyecto -->
+            <h3 class="project-card-title">Acceso Industrial</h3>
+            <!-- EDITAR: Descripción breve -->
+            <p class="project-card-text">
+              Pavimentación en concreto de 3500m² para acceso industrial. Preparación
+              de base, hormigonado y alisado para tráfico pesado.
+            </p>
+            <!-- EDITAR: Detalles del proyecto -->
+            <div class="project-card-details">
+              <span><i class="fas fa-ruler-combined"></i> 3500m²</span>
+              <span><i class="fas fa-road"></i> Concreto</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AGREGAR MÁS PROYECTOS: Duplicar el bloque anterior y editar los valores -->
+
+      </div>
+    </div>
+  </section>
+  <!-- FIN SECCIÓN: Grid de proyectos -->
+
+  <!-- ============ LLAMADA A LA ACCIÓN ============ -->
+  <section class="section section-gray">
+    <div class="section-container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto;" class="scroll-animate">
+        <h2 class="section-title">¿Tu proyecto puede ser el próximo?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.8;">
+          Contactanos para comenzar a trabajar juntos y hacer realidad tu proyecto.
+          Cada obra es una oportunidad para demostrar nuestra calidad.
+        </p>
+        <a href="contacto.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 15px 50px;">
+          Iniciar Mi Proyecto
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Hermanos Cattaneo</h3>
+        <p>
+          Empresa constructora familiar con más de 20 años de experiencia.
+          Construcción, pavimentación y desarrollo de proyectos edilicios.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <a href="index.html">Inicio</a>
+        <a href="quienes-somos.html">Quiénes Somos</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p><i class="fas fa-phone"></i> +54 9 123 456-7890</p>
+        <p><i class="fas fa-envelope"></i> contacto@hermanoscattaneo.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Calle Ejemplo 123, Ciudad, Provincia</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <p>
+          <a href="#" style="margin-right: 15px; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+          <a href="#" style="margin-right: 15px; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Hermanos Cattaneo. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ============ BOTÓN FLOTANTE WHATSAPP ============ -->
+  <div class="whatsapp-float">
+    <a href="#" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

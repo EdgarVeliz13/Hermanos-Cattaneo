@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactá a Hermanos Cattaneo. Teléfono, email, formulario de contacto y ubicación.">
+  <title>Contacto - Hermanos Cattaneo | Constructora</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Iconos (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .page-header {
+      background: linear-gradient(135deg, rgba(255, 140, 0, 0.9), rgba(218, 165, 32, 0.9)),
+                  url('https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?auto=compress&cs=tinysrgb&w=1920');
+      background-size: cover;
+      background-position: center;
+      padding: 120px 20px 80px;
+      text-align: center;
+      color: white;
+    }
+
+    .page-header h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .contact-block {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-block h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-block h3 i {
+      color: #FF8C00;
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .contact-info-item i {
+      color: #FF8C00;
+      font-size: 1.5rem;
+      width: 30px;
+    }
+
+    .contact-info-item a {
+      color: #FF8C00;
+      text-decoration: underline;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .form-group label span {
+      color: #FF8C00;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 12px 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #FF8C00;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-group small {
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    .submit-btn {
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #FF8C00, #DAA520);
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+    }
+
+    .map-container {
+      width: 100%;
+      height: 350px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="top-bar">
+    <div class="top-bar-container">
+      <div class="top-bar-item">
+        <i class="fas fa-phone"></i>
+        <a href="tel:+5491234567890">+54 9 123 456-7890</a>
+      </div>
+      <div class="top-bar-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:contacto@hermanoscattaneo.com">contacto@hermanoscattaneo.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">
+        <div class="navbar-logo-icon">
+          <i class="fas fa-hard-hat"></i>
+        </div>
+        <span>Hermanos Cattaneo</span>
+      </a>
+
+      <ul class="navbar-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <button class="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <section class="page-header">
+    <h1>Contacto</h1>
+    <p>Estamos listos para escuchar tu proyecto y brindarte la mejor solución</p>
+  </section>
+
+  <!-- ============ BLOQUES DE CONTACTO ============ -->
+  <!-- INICIO SECCIÓN: Información de contacto, Mapa y Formulario -->
+  <section class="section section-white">
+    <div class="section-container">
+      <div class="contact-grid">
+
+        <!-- BLOQUE 1: Información de Contacto -->
+        <div class="contact-block scroll-animate">
+          <h3><i class="fas fa-info-circle"></i> Información de Contacto</h3>
+
+          <!-- EDITAR: Número de teléfono -->
+          <div class="contact-info-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <strong>Teléfono:</strong><br>
+              <a href="tel:+5491234567890">+54 9 123 456-7890</a>
+            </div>
+          </div>
+
+          <!-- EDITAR: Correo electrónico -->
+          <div class="contact-info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email:</strong><br>
+              <a href="mailto:contacto@hermanoscattaneo.com">contacto@hermanoscattaneo.com</a>
+            </div>
+          </div>
+
+          <!-- EDITAR: Dirección física -->
+          <div class="contact-info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Dirección:</strong><br>
+              Calle Ejemplo 123<br>
+              Ciudad, Provincia<br>
+              Código Postal
+            </div>
+          </div>
+
+          <!-- EDITAR: Horarios (opcional) -->
+          <div class="contact-info-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <strong>Horarios de Atención:</strong><br>
+              Lunes a Viernes: 8:00 - 18:00<br>
+              Sábados: 9:00 - 13:00
+            </div>
+          </div>
+        </div>
+
+        <!-- BLOQUE 2: Google Maps -->
+        <div class="contact-block scroll-animate">
+          <h3><i class="fas fa-map"></i> Nuestra Ubicación</h3>
+          <div class="map-container">
+            <!-- EDITAR: Reemplazar con el iframe de Google Maps de tu ubicación real -->
+            <!-- Para obtener el código, ir a Google Maps > Buscar tu dirección > Compartir > Insertar un mapa -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016888303638!2d-58.38375908477065!3d-34.60373446512843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacf7e1e4d95%3A0x9c5c9b6e7f1e4d95!2sBuenos%20Aires%2C%20Argentina!5e0!3m2!1ses!2s!4v1234567890123!5m2!1ses!2s"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+            Visitanos en nuestra oficina o coordiná una reunión para discutir tu proyecto.
+          </p>
+        </div>
+
+        <!-- BLOQUE 3: Formulario de Contacto -->
+        <div class="contact-block scroll-animate">
+          <h3><i class="fas fa-paper-plane"></i> Envíanos un Mensaje</h3>
+
+          <!-- INICIO: Formulario -->
+          <form id="contact-form" class="contact-form">
+
+            <!-- Nombre -->
+            <div class="form-group">
+              <label for="nombre">Nombre <span>*</span></label>
+              <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+            </div>
+
+            <!-- Apellido -->
+            <div class="form-group">
+              <label for="apellido">Apellido <span>*</span></label>
+              <input type="text" id="apellido" name="apellido" required placeholder="Tu apellido">
+            </div>
+
+            <!-- Empresa (opcional) -->
+            <div class="form-group">
+              <label for="empresa">Empresa o Particular</label>
+              <input type="text" id="empresa" name="empresa" placeholder="Nombre de empresa (opcional)">
+              <small>Dejá en blanco si sos particular</small>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email">Correo Electrónico <span>*</span></label>
+              <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            </div>
+
+            <!-- Mensaje -->
+            <div class="form-group">
+              <label for="mensaje">Mensaje <span>*</span></label>
+              <textarea id="mensaje" name="mensaje" required placeholder="Contanos sobre tu proyecto..."></textarea>
+            </div>
+
+            <!-- Botón Enviar -->
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i> Enviar Mensaje
+            </button>
+          </form>
+          <!-- FIN: Formulario -->
+
+          <p style="margin-top: 20px; font-size: 0.85rem; color: #888; text-align: center;">
+            <i class="fas fa-lock"></i> Tus datos están protegidos y no serán compartidos con terceros.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- FIN SECCIÓN: Contacto -->
+
+  <!-- ============ LLAMADA A LA ACCIÓN ALTERNATIVA ============ -->
+  <section class="section section-gray">
+    <div class="section-container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto;" class="scroll-animate">
+        <h2 class="section-title">¿Preferís una consulta telefónica?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.8;">
+          Llamanos directamente o escribinos por WhatsApp para una respuesta inmediata.
+          Nuestro equipo está disponible para asesorarte.
+        </p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+          <a href="tel:+5491234567890" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 10px;">
+            <i class="fas fa-phone"></i> Llamar Ahora
+          </a>
+          <a href="#" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: white; border: none;">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Hermanos Cattaneo</h3>
+        <p>
+          Empresa constructora familiar con más de 20 años de experiencia.
+          Construcción, pavimentación y desarrollo de proyectos edilicios.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <a href="index.html">Inicio</a>
+        <a href="quienes-somos.html">Quiénes Somos</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p><i class="fas fa-phone"></i> +54 9 123 456-7890</p>
+        <p><i class="fas fa-envelope"></i> contacto@hermanoscattaneo.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Calle Ejemplo 123, Ciudad, Provincia</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <p>
+          <a href="#" style="margin-right: 15px; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+          <a href="#" style="margin-right: 15px; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Hermanos Cattaneo. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ============ BOTÓN FLOTANTE WHATSAPP ============ -->
+  <div class="whatsapp-float">
+    <a href="#" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

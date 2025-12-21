@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Servicios de construcción, edificación y pavimentación de Hermanos Cattaneo. Casas, edificios y pavimentación de calidad.">
+  <title>Servicios - Hermanos Cattaneo | Constructora</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Iconos (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .page-header {
+      background: linear-gradient(135deg, rgba(255, 140, 0, 0.9), rgba(218, 165, 32, 0.9)),
+                  url('https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?auto=compress&cs=tinysrgb&w=1920');
+      background-size: cover;
+      background-position: center;
+      padding: 120px 20px 80px;
+      text-align: center;
+      color: white;
+    }
+
+    .page-header h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .service-card-large {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card-large:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card-large img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 350px;
+    }
+
+    .service-card-content {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .service-card-content h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .service-card-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .service-features {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-features li {
+      padding: 10px 0;
+      font-size: 1rem;
+      color: #666;
+      border-bottom: 1px solid #eee;
+    }
+
+    .service-features li:last-child {
+      border-bottom: none;
+    }
+
+    .service-features li i {
+      color: #FF8C00;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+
+      .service-card-large {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card-large img {
+        min-height: 250px;
+      }
+
+      .service-card-content {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="top-bar">
+    <div class="top-bar-container">
+      <div class="top-bar-item">
+        <i class="fas fa-phone"></i>
+        <a href="tel:+5491234567890">+54 9 123 456-7890</a>
+      </div>
+      <div class="top-bar-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:contacto@hermanoscattaneo.com">contacto@hermanoscattaneo.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">
+        <div class="navbar-logo-icon">
+          <i class="fas fa-hard-hat"></i>
+        </div>
+        <span>Hermanos Cattaneo</span>
+      </a>
+
+      <ul class="navbar-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <button class="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <!-- INICIO SECCIÓN: Encabezado de página -->
+  <section class="page-header">
+    <!-- EDITAR: Título de la página -->
+    <h1>Nuestros Servicios</h1>
+    <!-- EDITAR: Descripción breve -->
+    <p>Soluciones integrales en construcción y pavimentación para cada necesidad</p>
+  </section>
+  <!-- FIN SECCIÓN: Encabezado de página -->
+
+  <!-- ============ CONSTRUCCIÓN DE CASAS ============ -->
+  <!-- INICIO SECCIÓN: Servicio 1 - Casas -->
+  <section class="section section-white">
+    <div class="section-container">
+      <div class="service-card-large scroll-animate">
+        <!-- EDITAR: Imagen del servicio -->
+        <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Construcción de Casas">
+        <div class="service-card-content">
+          <!-- EDITAR: Título del servicio -->
+          <h3><i class="fas fa-home"></i> Construcción de Casas</h3>
+          <!-- EDITAR: Descripción del servicio -->
+          <p>
+            Diseñamos y construimos la casa de tus sueños desde cero, con atención personalizada
+            en cada detalle. Nuestro equipo de profesionales te acompaña desde la primera consulta
+            hasta la entrega de llaves, garantizando calidad, transparencia y cumplimiento de plazos.
+          </p>
+          <!-- EDITAR: Características del servicio -->
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Diseño arquitectónico personalizado</li>
+            <li><i class="fas fa-check-circle"></i> Materiales de primera calidad</li>
+            <li><i class="fas fa-check-circle"></i> Seguimiento y control de obra</li>
+            <li><i class="fas fa-check-circle"></i> Garantía en todos los trabajos</li>
+            <li><i class="fas fa-check-circle"></i> Asesoramiento técnico permanente</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FIN SECCIÓN: Servicio 1 -->
+
+  <!-- ============ CONSTRUCCIÓN DE EDIFICIOS ============ -->
+  <!-- INICIO SECCIÓN: Servicio 2 - Edificios -->
+  <section class="section section-gray">
+    <div class="section-container">
+      <div class="service-card-large scroll-animate">
+        <div class="service-card-content">
+          <!-- EDITAR: Título del servicio -->
+          <h3><i class="fas fa-building"></i> Construcción de Edificios</h3>
+          <!-- EDITAR: Descripción del servicio -->
+          <p>
+            Desarrollamos proyectos de edificación de múltiples niveles con ingeniería de punta y
+            estricto cumplimiento de normativas. Desde planta baja hasta edificios completos, ofrecemos
+            soluciones integrales para emprendimientos inmobiliarios y construcciones comerciales.
+          </p>
+          <!-- EDITAR: Niveles / Características -->
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> <strong>Planta Baja:</strong> Cimientos y estructura base con máxima resistencia</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Primer Piso:</strong> Construcción de niveles superiores con técnicas avanzadas</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Segundo Piso y más:</strong> Desarrollo de edificios de hasta 10 plantas</li>
+            <li><i class="fas fa-check-circle"></i> Cálculo estructural certificado</li>
+            <li><i class="fas fa-check-circle"></i> Instalaciones eléctricas, sanitarias y gas</li>
+            <li><i class="fas fa-check-circle"></i> Gestión de permisos y habilitaciones</li>
+          </ul>
+        </div>
+        <!-- EDITAR: Imagen del servicio -->
+        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Construcción de Edificios">
+      </div>
+    </div>
+  </section>
+  <!-- FIN SECCIÓN: Servicio 2 -->
+
+  <!-- ============ PAVIMENTACIÓN - ADOQUINADO ============ -->
+  <!-- INICIO SECCIÓN: Servicio 3 - Adoquinado -->
+  <section class="section section-white">
+    <div class="section-container">
+      <div class="service-card-large scroll-animate">
+        <!-- EDITAR: Imagen del servicio -->
+        <img src="https://images.pexels.com/photos/416960/pexels-photo-416960.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Adoquinado">
+        <div class="service-card-content">
+          <!-- EDITAR: Título del servicio -->
+          <h3><i class="fas fa-road"></i> Pavimentación - Adoquinado</h3>
+          <!-- EDITAR: Descripción del servicio -->
+          <p>
+            Servicios profesionales de adoquinado para espacios públicos, privados, caminos,
+            patios y accesos. Utilizamos adoquines de alta resistencia con técnicas de colocación
+            que garantizan durabilidad y excelente terminación estética.
+          </p>
+          <!-- EDITAR: Características del servicio -->
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Adoquines de hormigón de alta resistencia</li>
+            <li><i class="fas fa-check-circle"></i> Variedad de diseños y colores</li>
+            <li><i class="fas fa-check-circle"></i> Preparación de base y compactación profesional</li>
+            <li><i class="fas fa-check-circle"></i> Ideal para tránsito vehicular y peatonal</li>
+            <li><i class="fas fa-check-circle"></i> Bajo mantenimiento y larga durabilidad</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FIN SECCIÓN: Servicio 3 -->
+
+  <!-- ============ PAVIMENTACIÓN - CONCRETO ============ -->
+  <!-- INICIO SECCIÓN: Servicio 4 - Pavimentación en Concreto -->
+  <section class="section section-gray">
+    <div class="section-container">
+      <div class="service-card-large scroll-animate">
+        <div class="service-card-content">
+          <!-- EDITAR: Título del servicio -->
+          <h3><i class="fas fa-layer-group"></i> Pavimentación en Concreto</h3>
+          <!-- EDITAR: Descripción del servicio -->
+          <p>
+            Pavimentación en concreto para grandes superficies, calles, estacionamientos y
+            accesos industriales. Ofrecemos soluciones resistentes y duraderas con acabados
+            de calidad profesional y técnicas de última generación.
+          </p>
+          <!-- EDITAR: Características del servicio -->
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Hormigón de alta resistencia</li>
+            <li><i class="fas fa-check-circle"></i> Nivelación y alisado profesional</li>
+            <li><i class="fas fa-check-circle"></i> Juntas de dilatación correctamente ejecutadas</li>
+            <li><i class="fas fa-check-circle"></i> Apto para tráfico pesado</li>
+            <li><i class="fas fa-check-circle"></i> Tratamiento de superficies antideslizantes</li>
+            <li><i class="fas fa-check-circle"></i> Presupuestos por m² sin sorpresas</li>
+          </ul>
+        </div>
+        <!-- EDITAR: Imagen del servicio -->
+        <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pavimentación en Concreto">
+      </div>
+    </div>
+  </section>
+  <!-- FIN SECCIÓN: Servicio 4 -->
+
+  <!-- ============ LLAMADA A LA ACCIÓN ============ -->
+  <section class="section section-white">
+    <div class="section-container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto;" class="scroll-animate">
+        <h2 class="section-title">¿Necesitás un presupuesto?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.8;">
+          Contactanos hoy mismo para recibir un presupuesto personalizado sin compromiso.
+          Nuestro equipo te asesorará en cada etapa del proyecto.
+        </p>
+        <a href="contacto.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 15px 50px;">
+          Solicitar Presupuesto
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Hermanos Cattaneo</h3>
+        <p>
+          Empresa constructora familiar con más de 20 años de experiencia.
+          Construcción, pavimentación y desarrollo de proyectos edilicios.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <a href="index.html">Inicio</a>
+        <a href="quienes-somos.html">Quiénes Somos</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p><i class="fas fa-phone"></i> +54 9 123 456-7890</p>
+        <p><i class="fas fa-envelope"></i> contacto@hermanoscattaneo.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Calle Ejemplo 123, Ciudad, Provincia</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <p>
+          <a href="#" style="margin-right: 15px; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+          <a href="#" style="margin-right: 15px; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Hermanos Cattaneo. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ============ BOTÓN FLOTANTE WHATSAPP ============ -->
+  <div class="whatsapp-float">
+    <a href="#" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

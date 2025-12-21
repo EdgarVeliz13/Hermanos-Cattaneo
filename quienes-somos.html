@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conocé la historia de Hermanos Cattaneo, nuestra misión, visión y los valores que nos guían como empresa constructora familiar.">
+  <title>Quiénes Somos - Hermanos Cattaneo | Constructora</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Iconos (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Estilos adicionales específicos para esta página */
+    .page-header {
+      background: linear-gradient(135deg, rgba(255, 140, 0, 0.9), rgba(218, 165, 32, 0.9)),
+                  url('https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1920');
+      background-size: cover;
+      background-position: center;
+      padding: 120px 20px 80px;
+      text-align: center;
+      color: white;
+    }
+
+    .page-header h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-top: 50px;
+    }
+
+    .info-card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .info-card-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 25px;
+      background: linear-gradient(135deg, #FF8C00, #DAA520);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: white;
+    }
+
+    .info-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .info-card p {
+      line-height: 1.8;
+      color: #666;
+    }
+
+    .story-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      margin: 50px 0;
+    }
+
+    .story-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .story-content h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .story-content p {
+      line-height: 1.8;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+
+      .story-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .story-image {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="top-bar">
+    <div class="top-bar-container">
+      <div class="top-bar-item">
+        <i class="fas fa-phone"></i>
+        <a href="tel:+5491234567890">+54 9 123 456-7890</a>
+      </div>
+      <div class="top-bar-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:contacto@hermanoscattaneo.com">contacto@hermanoscattaneo.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">
+        <div class="navbar-logo-icon">
+          <i class="fas fa-hard-hat"></i>
+        </div>
+        <span>Hermanos Cattaneo</span>
+      </a>
+
+      <ul class="navbar-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <button class="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <!-- INICIO SECCIÓN: Encabezado de página -->
+  <section class="page-header">
+    <!-- EDITAR: Título de la página -->
+    <h1>Quiénes Somos</h1>
+    <!-- EDITAR: Descripción breve -->
+    <p>Conocé nuestra historia, valores y el compromiso que nos distingue</p>
+  </section>
+  <!-- FIN SECCIÓN: Encabezado de página -->
+
+  <!-- ============ NUESTRA HISTORIA ============ -->
+  <!-- INICIO SECCIÓN: Historia -->
+  <section class="section section-white">
+    <div class="section-container">
+      <div class="story-section scroll-animate">
+        <div>
+          <!-- EDITAR: Imagen de la empresa -->
+          <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hermanos Cattaneo" class="story-image">
+        </div>
+        <div class="story-content">
+          <!-- EDITAR: Título de la historia -->
+          <h3>Nuestra Historia</h3>
+          <!-- EDITAR: Texto de la historia de la empresa -->
+          <p>
+            <strong>Hermanos Cattaneo</strong> nació hace más de 20 años como un emprendimiento familiar
+            con un sueño claro: brindar servicios de construcción de la más alta calidad, con el compromiso
+            y la calidez que solo una empresa de hermanos puede ofrecer.
+          </p>
+          <p>
+            Desde nuestros inicios, hemos trabajado con dedicación en cada proyecto, tratando cada obra como
+            si fuera nuestra propia casa. Esta filosofía nos ha permitido crecer y consolidarnos en el mercado,
+            ganándonos la confianza de cientos de clientes satisfechos.
+          </p>
+          <p>
+            Hoy, seguimos siendo una empresa familiar, pero con la experiencia, el equipo y los recursos para
+            llevar adelante proyectos de cualquier envergadura, siempre manteniendo nuestros valores fundacionales
+            de honestidad, calidad y compromiso.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FIN SECCIÓN: Historia -->
+
+  <!-- ============ MISIÓN, VISIÓN, VALORES ============ -->
+  <!-- INICIO SECCIÓN: Misión, Visión y Valores -->
+  <section class="section section-gray">
+    <div class="section-container">
+      <div class="scroll-animate">
+        <h2 class="section-title">Nuestros Pilares</h2>
+        <p class="section-subtitle">
+          Los valores y principios que guían cada uno de nuestros proyectos
+        </p>
+      </div>
+
+      <div class="info-grid">
+        <!-- Misión -->
+        <div class="info-card scroll-animate">
+          <div class="info-card-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <!-- EDITAR: Título -->
+          <h3>Misión</h3>
+          <!-- EDITAR: Descripción de la misión -->
+          <p>
+            Proveer soluciones integrales en construcción y pavimentación, superando las expectativas
+            de nuestros clientes mediante la excelencia técnica, el uso de materiales de primera calidad
+            y un servicio personalizado que garantice la satisfacción total en cada proyecto.
+          </p>
+        </div>
+
+        <!-- Visión -->
+        <div class="info-card scroll-animate">
+          <div class="info-card-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <!-- EDITAR: Título -->
+          <h3>Visión</h3>
+          <!-- EDITAR: Descripción de la visión -->
+          <p>
+            Ser reconocidos como la empresa constructora líder en la región, distinguidos por nuestra
+            calidad, innovación y compromiso familiar. Aspiramos a seguir creciendo sin perder nuestra
+            esencia, siendo referentes en construcción responsable y sostenible.
+          </p>
+        </div>
+
+        <!-- Valores -->
+        <div class="info-card scroll-animate">
+          <div class="info-card-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <!-- EDITAR: Título -->
+          <h3>Valores</h3>
+          <!-- EDITAR: Descripción de los valores -->
+          <p>
+            <strong>Compromiso:</strong> Cumplimos con nuestras promesas.<br>
+            <strong>Calidad:</strong> Sin concesiones en cada detalle.<br>
+            <strong>Honestidad:</strong> Transparencia en cada proceso.<br>
+            <strong>Familia:</strong> Tratamos cada proyecto como propio.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FIN SECCIÓN: Misión, Visión y Valores -->
+
+  <!-- ============ OBJETIVOS ============ -->
+  <!-- INICIO SECCIÓN: Objetivos -->
+  <section class="section section-white">
+    <div class="section-container">
+      <div class="scroll-animate">
+        <h2 class="section-title">Nuestros Objetivos</h2>
+        <p class="section-subtitle">
+          Las metas que nos impulsan a mejorar cada día
+        </p>
+      </div>
+
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div class="info-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+          <!-- Objetivo 1 -->
+          <div class="info-card scroll-animate">
+            <div class="info-card-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <!-- EDITAR: Objetivo -->
+            <h3>Excelencia</h3>
+            <p>
+              Mantener y superar los más altos estándares de calidad en cada proyecto que emprendemos.
+            </p>
+          </div>
+
+          <!-- Objetivo 2 -->
+          <div class="info-card scroll-animate">
+            <div class="info-card-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <!-- EDITAR: Objetivo -->
+            <h3>Satisfacción</h3>
+            <p>
+              Garantizar la total satisfacción de nuestros clientes mediante un servicio personalizado y profesional.
+            </p>
+          </div>
+
+          <!-- Objetivo 3 -->
+          <div class="info-card scroll-animate">
+            <div class="info-card-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <!-- EDITAR: Objetivo -->
+            <h3>Sostenibilidad</h3>
+            <p>
+              Incorporar prácticas constructivas responsables y respetuosas con el medio ambiente.
+            </p>
+          </div>
+
+          <!-- Objetivo 4 -->
+          <div class="info-card scroll-animate">
+            <div class="info-card-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <!-- EDITAR: Objetivo -->
+            <h3>Innovación</h3>
+            <p>
+              Estar a la vanguardia tecnológica y aplicar las mejores técnicas constructivas del mercado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FIN SECCIÓN: Objetivos -->
+
+  <!-- ============ LLAMADA A LA ACCIÓN ============ -->
+  <section class="section section-gray">
+    <div class="section-container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto;" class="scroll-animate">
+        <h2 class="section-title">¿Querés trabajar con nosotros?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.8;">
+          Estamos listos para hacer realidad tu próximo proyecto. Contactanos para obtener una
+          consulta gratuita y comenzar a construir juntos.
+        </p>
+        <a href="contacto.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 15px 50px;">
+          Contactar Ahora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Hermanos Cattaneo</h3>
+        <p>
+          Empresa constructora familiar con más de 20 años de experiencia.
+          Construcción, pavimentación y desarrollo de proyectos edilicios.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <a href="index.html">Inicio</a>
+        <a href="quienes-somos.html">Quiénes Somos</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p><i class="fas fa-phone"></i> +54 9 123 456-7890</p>
+        <p><i class="fas fa-envelope"></i> contacto@hermanoscattaneo.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Calle Ejemplo 123, Ciudad, Provincia</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <p>
+          <a href="#" style="margin-right: 15px; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+          <a href="#" style="margin-right: 15px; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Hermanos Cattaneo. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ============ BOTÓN FLOTANTE WHATSAPP ============ -->
+  <div class="whatsapp-float">
+    <a href="#" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
