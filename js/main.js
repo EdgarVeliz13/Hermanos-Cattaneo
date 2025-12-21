@@ -403,7 +403,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (whatsappButton) {
     // CONFIGURACIÓN: Número de WhatsApp de la empresa
     // IMPORTANTE: Cambiar este número por el de la empresa
-    const phoneNumber = '5491234567890'; // Formato: código de país + código de área + número (sin espacios ni guiones)
+    const phoneNumber = '+543875545569'; // Formato: código de país + código de área + número (sin espacios ni guiones)
     const message = encodeURIComponent('Hola, me gustaría obtener más información sobre sus servicios.');
 
     // Detectar si es móvil o desktop
